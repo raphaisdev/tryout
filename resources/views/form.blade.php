@@ -61,8 +61,8 @@
         @endif
 
             <form action="/save" enctype="multipart/form-data" method="post" target="_self">
-                <p>Nome:<br>
-                    <input type="text" name="nome"></p>
+                <p>Nome Completo:<br>
+                    <input type="text" name="nome" placeholder="John Doo"></p>
                 <p>E-mail:<br>
                     <input type="text" name="email"></p>
                 <p>Confirmação de e-mail:<br>

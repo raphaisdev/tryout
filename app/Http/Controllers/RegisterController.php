@@ -22,13 +22,14 @@ class RegisterController extends Controller
     {
         //valida os dados recebidos no formulario
         $validate = Validator::make($request->all(), [
-            'nome' => 'required',
+            'nome' => ['required', 'regex:/([a-zA-Z]+\s?\b){2,}/'],
             'senha' => 'required',
             'telefone' => 'required',
             'email'=> 'required|email',
             'confirmacao_email'=> 'same:email'
         ], [
-            'nome.required' => 'Você precisa fornecer o seu nome.',
+            'nome.required' => 'Você precisa fornecer o seu nome e seu sobrenome.',
+            'nome.regex' => 'Em seu nome, somente letras e espaços são aceitos. Ex.: John Doo',
             'senha.required' => 'Você precisa fornecer uma senha.',
             'telefone.required' => 'Você precisa fornecer o seu telefone.',
             'email.required' => 'Você precisa fornecer seu email.',
