@@ -27,6 +27,13 @@ class RegisterController extends Controller
             'telefone' => 'required',
             'email'=> 'required|email',
             'confirmacao_email'=> 'same:email'
+        ], [
+            'nome.required' => 'Você precisa fornecer o seu nome.',
+            'senha.required' => 'Você precisa fornecer uma senha.',
+            'telefone.required' => 'Você precisa fornecer o seu telefone.',
+            'email.required' => 'Você precisa fornecer seu email.',
+            'email.email' => 'Você precisa fornecer um email válido.',
+            'confirmacao_email.same' => 'Não foi possível confirmar seu email.',
         ]);
 
         //caso não passe por alguma regra
