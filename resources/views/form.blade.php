@@ -53,9 +53,9 @@
         @if ($errors->any())
             <div class="alert">
                 <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
                 </ul>
             </div>
         @endif
@@ -70,7 +70,7 @@
                 <p>Senha:<br>
                     <input type="password" name="senha" placeholder="abcde;7"></p>
                 <p>Telefone:<br>
-                    <input type="text" name="telefone"></p>
+                    <input type="text" name="telefone" placeholder="+XX (XX) XXXXX-XXXX"></p>
                 <p><input type="submit" value="Enviar"></p>
             </form>
 

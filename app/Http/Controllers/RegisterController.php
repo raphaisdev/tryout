@@ -24,7 +24,7 @@ class RegisterController extends Controller
         $validate = Validator::make($request->all(), [
             'nome' => ['required', 'regex:/([a-zA-Z]+\s?\b){2,}/'],
             'senha' => ['required', 'regex:/(?=.*[a-zA-Z])(?=.*\d)(?=.*\W).{7,}$/'],
-            'telefone' => 'required',
+            'telefone' => ['required', 'regex:/^(?:(?:\+|00)?\d{2}\s?)?(?:\(?([\d][\d])\)?\s?)?(?:((?:9\d|[2-9])\d{3})\-?(\d{4}))$/'],
             'email'=> 'required|email',
             'confirmacao_email'=> 'same:email'
         ], [
@@ -33,6 +33,7 @@ class RegisterController extends Controller
             'senha.required' => 'Você precisa fornecer uma senha.',
             'senha.regex' => 'Sua senha deve possuir pelo menos 7 caracteres, contendo ao menos 1 número e uma pontuação.',
             'telefone.required' => 'Você precisa fornecer o seu telefone.',
+            'telefone.regex' => 'O número de telefone deve seguir algum desses formatos: +XX (XX) XXXXX-XXXX / XXXX-XXXX / XX XXXX-XXXX / XXXXXXXXXXXXX',
             'email.required' => 'Você precisa fornecer seu email.',
             'email.email' => 'Você precisa fornecer um email válido.',
             'confirmacao_email.same' => 'Não foi possível confirmar seu email.',
