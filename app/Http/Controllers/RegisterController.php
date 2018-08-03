@@ -23,7 +23,7 @@ class RegisterController extends Controller
         //valida os dados recebidos no formulario
         $validate = Validator::make($request->all(), [
             'nome' => ['required', 'regex:/([a-zA-Z]+\s?\b){2,}/'],
-            'senha' => 'required',
+            'senha' => ['required', 'regex:/(?=.*[a-zA-Z])(?=.*\d)(?=.*\W).{7,}$/'],
             'telefone' => 'required',
             'email'=> 'required|email',
             'confirmacao_email'=> 'same:email'
@@ -31,6 +31,7 @@ class RegisterController extends Controller
             'nome.required' => 'Você precisa fornecer o seu nome e seu sobrenome.',
             'nome.regex' => 'Em seu nome, somente letras e espaços são aceitos. Ex.: John Doo',
             'senha.required' => 'Você precisa fornecer uma senha.',
+            'senha.regex' => 'Sua senha deve possuir pelo menos 7 caracteres, contendo ao menos 1 número e uma pontuação.',
             'telefone.required' => 'Você precisa fornecer o seu telefone.',
             'email.required' => 'Você precisa fornecer seu email.',
             'email.email' => 'Você precisa fornecer um email válido.',

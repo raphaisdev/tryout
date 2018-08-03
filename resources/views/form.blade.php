@@ -68,7 +68,7 @@
                 <p>Confirmação de e-mail:<br>
                     <input type="text" name="confirmacao_email"></p>
                 <p>Senha:<br>
-                    <input type="password" name="senha"></p>
+                    <input type="password" name="senha" placeholder="abcde;7"></p>
                 <p>Telefone:<br>
                     <input type="text" name="telefone"></p>
                 <p><input type="submit" value="Enviar"></p>
