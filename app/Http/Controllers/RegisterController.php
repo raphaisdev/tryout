@@ -13,4 +13,12 @@ class RegisterController extends Controller
     {
         return view('form');
     }
+
+    /**
+    * Método para salvar os dados do formulário
+    */
+    public function save(Request $request)
+    {
+        print_r($request->all());
+    }
 }

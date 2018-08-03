@@ -12,3 +12,4 @@
 */
 
 Route::get('/', 'RegisterController@form');
+Route::post('/save', 'RegisterController@save');
