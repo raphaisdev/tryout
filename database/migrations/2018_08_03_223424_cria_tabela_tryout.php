@@ -15,7 +15,10 @@ class CriaTabelaTryout extends Migration
     {
         Schema::create('tryout', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
+            $table->string('nome', 255);
+            $table->string('telefone', 255);
+            $table->string('email', 255);
+            $table->string('senha', 255);
         });
     }
 
