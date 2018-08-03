@@ -43,6 +43,16 @@
     <body>
         <div class="myform">
 
+        @if ($errors->any())
+            <div class="alert">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
             <form action="/save" enctype="multipart/form-data" method="post" target="_self">
                 <p>Nome:<br>
                     <input type="text" name="nome"></p>
