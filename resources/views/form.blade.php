@@ -43,7 +43,7 @@
     <body>
         <div class="myform">
 
-            <form action="" enctype="multipart/form-data" method="post" target="_self">
+            <form action="/save" enctype="multipart/form-data" method="post" target="_self">
                 <p>Nome:<br>
                     <input type="text" name="nome"></p>
                 <p>E-mail:<br>
