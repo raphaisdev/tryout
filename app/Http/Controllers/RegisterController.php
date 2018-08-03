@@ -58,6 +58,6 @@ class RegisterController extends Controller
             'senha' => $request->input('senha'),
         ]);
 
-        print_r($request->all());
+        return view('success');
     }
 }
