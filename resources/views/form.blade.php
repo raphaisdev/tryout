@@ -24,6 +24,13 @@
                 margin:20px auto;
                 width: 600px;
             }
+            .alert {
+                background-color: #faa;
+                border: 2px solid red;
+                font-size: 13px;
+                line-height: 150%;
+                padding: 10px;
+            }
             input {
                 font-family: sans-serif;
                 font-size: 13px;
