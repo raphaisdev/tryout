@@ -62,15 +62,15 @@
 
             <form action="/save" enctype="multipart/form-data" method="post" target="_self">
                 <p>Nome Completo:<br>
-                    <input type="text" name="nome" placeholder="John Doo"></p>
+                    <input type="text" name="nome" placeholder="John Doo" value="{{ old('nome') }}"></p>
                 <p>E-mail:<br>
-                    <input type="text" name="email"></p>
+                    <input type="text" name="email" value="{{ old('email') }}"></p>
                 <p>Confirmação de e-mail:<br>
-                    <input type="text" name="confirmacao_email"></p>
+                    <input type="text" name="confirmacao_email" value="{{ old('confirmacao_email') }}"></p>
                 <p>Senha:<br>
                     <input type="password" name="senha" placeholder="abcde;7"></p>
                 <p>Telefone:<br>
-                    <input type="text" name="telefone" placeholder="+XX (XX) XXXXX-XXXX"></p>
+                    <input type="text" name="telefone" placeholder="+XX (XX) XXXXX-XXXX" value="{{ old('telefone') }}"></p>
                 <p><input type="submit" value="Enviar"></p>
             </form>
 
